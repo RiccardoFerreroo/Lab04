@@ -17,6 +17,7 @@ class Crociera:
     def cabine_ordinate_per_prezzo(self):
         """Restituisce la lista ordinata delle cabine in base al prezzo"""
         # TODO
+        #ok
 
 
     def elenca_passeggeri(self):
