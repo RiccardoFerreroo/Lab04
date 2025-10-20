@@ -22,5 +22,5 @@ class Crociera:
 
     def elenca_passeggeri(self):
         """Stampa l'elenco dei passeggeri mostrando, per ognuno, la cabina a cui è associato, quando applicabile """
-        # TODO
+        # TODOo
 
