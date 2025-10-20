@@ -4,7 +4,7 @@ class Crociera:
         # TODO
 
     """Aggiungere setter e getter se necessari"""
-    # TODO
+    # TODOoo
 
     def carica_file_dati(self, file_path):
         """Carica i dati (cabine e passeggeri) dal file"""
