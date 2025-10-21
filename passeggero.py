@@ -3,7 +3,18 @@ class Passeggero :
         self._cod_passeggero= codice_passeggero
         self._nome = nome
         self._cognome = cognome
+        self._cabina = None
 
+
+    @property
+    def cabina(self):
+        return self._cabina
+    @cabina.setter
+    def cabina(self, cabina):
+        if self._cabina is not None:
+            raise Exception(f"il passeggero {self._nome}"
+                            f"{self._cognome} ha già una cabina")
+        self._cabina = cabina
     @property
     def codice_passeggero(self):
         return self._cod_passeggero

@@ -13,7 +13,12 @@ class Crociera:
         # questo controllandola prima di arricare alla assegnazione
         # della variabile all oggetto però questo ci può preclude dal
         # farlo prima facendolo dopo
-
+    @property
+    def nome(self):
+        return self._nome
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
     @property
     def cabine(self):
         return self._cabine
@@ -25,7 +30,7 @@ class Crociera:
         return f"{self._cabine} {self._passeggeri}, nome : {self._nome}"
 
     def carica_file_dati(self, file_path):
-        """Carica i dati (cabine e passeggeri) dal file"""
+        """ Carica i dati (cabine e passeggeri) dal file"""
         with open(file_path, 'r', encoding = "utf-8") as f:
             for riga in f:
                 riga = riga.strip()
@@ -63,7 +68,7 @@ class Crociera:
 
 
     def assegna_passeggero_a_cabina(self, codice_cabina, codice_passeggero):
-        """Associa una cabina a un passeggero"""
+        """ Associa una cabina a un passeggero"""
         #trova cabina
         cabina = None
         for c in self._cabine:
@@ -103,5 +108,4 @@ class Crociera:
                     cabina_info = c.codice_cabina
                     break
             print(f"{p.nome} {p.cognome} ({p.codice_passeggero}) - Cabina: {cabina_info}")
-        # TODOo
 

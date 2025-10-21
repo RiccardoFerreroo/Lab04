@@ -47,7 +47,14 @@ class Cabina:
         return self._passeggero
     @passeggero.setter
     def passeggero(self, passeggero):
+        if passeggero is None:
+            self._passeggero = None
+            return
+        if passeggero.cabina is not None:
+            raise Exception(f"il passeggero {passeggero.nome} è già"
+                            f" assegnato alla cabina {passeggero.cabina.codice_cabina}")
         self._passeggero = passeggero
+        passeggero.cabina = self
 
     def __str__(self):
 
