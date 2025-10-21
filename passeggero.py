@@ -26,3 +26,5 @@ class Passeggero :
 
     def __str__(self):
         return f"{self._nome} {self._cognome} ({self._cod_passeggero})"
+    def __repr__(self):
+        return f"{self._nome} {self._cognome} ({self._cod_passeggero})"

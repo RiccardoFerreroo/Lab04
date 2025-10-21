@@ -47,8 +47,13 @@ class Crociera:
                         num_letti = int(elementi[1])
                         ponte = int(elementi[2])
                         prezzo = float(elementi[3])
+                        if len(elementi) == 5:
+                            tipo = elementi[4]
 
-                        c = Cabina(elementi[0], num_letti, ponte, prezzo)
+                        else :
+                            tipo = "Standard"
+
+                        c = Cabina(elementi[0], num_letti, ponte, prezzo,tipo)
                         self._cabine.append(c)
                     except Exception as e:
                         print(e)
@@ -85,7 +90,7 @@ class Crociera:
         cabina.passeggero = passeggero
 
     def cabine_ordinate_per_prezzo(self):
-        """Restituisce la lista ordinata delle cabine in base al prezzo"""
+
 
         return sorted(self._cabine, key=lambda c: c.prezzo_base)
 
