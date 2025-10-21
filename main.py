@@ -19,6 +19,7 @@ def main():
 
         if scelta == "1":
             nuovo_nome = input("Inserisci il nuovo nome della crociera: ")
+
             # TODO: Aggiorna il nome della crociera
 
         elif scelta == "2":
@@ -26,6 +27,7 @@ def main():
             try:
                 crociera.carica_file_dati(file_path)
                 print("Dati caricati correttamente.")
+
             except FileNotFoundError:
                 print("File non trovato.")
 
